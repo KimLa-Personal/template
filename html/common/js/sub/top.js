@@ -4,40 +4,40 @@
 
 (function() {
 
-    var global = APP.global;
-    var fn = APP.fn;
-    var ui = APP.ui;
-    var utils = APP.utils;
-    var views = APP.views;
+	var global = APP.global;
+	var fn = APP.fn;
+	var ui = APP.ui;
+	var utils = APP.utils;
+	var views = APP.views;
 
-    /**
-     * 初期処理
-     */
-    var pageInit = function() {
+	/**
+	 * 初期処理
+	 */
+	var pageInit = function() {
 
-        /* トップ */
-        var topView = new TopView();
-        topView.init('#TopView');
+		/* トップ */
+		var topView = new TopView();
+		topView.init('#TopView');
 
-    };
+	};
 
-    /**
-     * トップ
-     */
-    var TopView = (function() {
-        var constructor = function() {
-            return this;
-        };
-        var proto = constructor.prototype = new views.PageView();
-        proto.render = function() {
-            views.PageView.prototype.render.apply(this);
+	/**
+	 * トップ
+	 */
+	var TopView = (function() {
+		var constructor = function() {
+			return this;
+		};
+		var proto = constructor.prototype = new views.PageView();
+		proto.render = function() {
+			views.PageView.prototype.render.apply(this);
 
-            return this;
-        };
-        return constructor;
-    })();
+			return this;
+		};
+		return constructor;
+	})();
 
-    /* 初期処理 */
-    pageInit();
+/* 初期処理 */
+pageInit();
 
 })();
