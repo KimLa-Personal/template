@@ -87,7 +87,7 @@
 				var that = this;
 				this.$anchor.off('click').on('click', function() {
 					if(!that.isScroll) {
-						that.smoothScroll($(this).attr(href));
+						that.smoothScroll($(this).attr('href'));
 						that.isScroll = false;
 					}
 					return false;
